@@ -19,4 +19,8 @@ class apache::config {
     owner  => 'root',
     group  => 'root',
   }
+  @@host {"${hostname}":
+    host_aliases => "$fqdn",
+    ip           => "$ipaddress",
+}
 }
